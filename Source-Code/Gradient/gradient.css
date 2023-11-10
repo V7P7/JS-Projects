@@ -1,0 +1,124 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+}
+
+body {
+  height: 100vh;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 400px;
+  padding: 50px 30px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+
+.container *:not(i) {
+  font-family: "Rubik", sans-serif;
+}
+
+.colors {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+input[type="color"] {
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: transparent;
+  width: 100px;
+  height: 45px;
+  cursor: pointer;
+}
+
+input[type="color"]::-webkit-color-swatch {
+  border-radius: 20px;
+  border: none;
+}
+
+.buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+}
+
+.buttons button {
+  height: 35px;
+  width: 35px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.rotate-icon i {
+  transform: rotate(45deg);
+}
+
+.buttons .active {
+  border: none;
+  background-color: #00ff3c;
+  color: #fff;
+}
+
+#submit,
+#generate-random {
+  display: block;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 16px;
+  padding: 12px 70px;
+  margin: 0 auto 30px auto;
+  cursor: pointer;
+}
+
+.output {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 3px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#code {
+  width: 100%;
+  resize: none;
+  color: #30304a;
+  padding: 10px 20px;
+  background: transparent;
+}
+
+#copy {
+  font-size: 14px;
+  background: transparent;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #30304a;
+  position: relative;
+  left: 85%;
+  bottom: 10px;
+  border-radius: 3px;
+  padding: 5px;
+  cursor: pointer;
+}

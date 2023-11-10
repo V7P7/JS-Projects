@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500&family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@400;500;700;900&family=Tektur:wght@400;500&family=Ubuntu:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  background-image: linear-gradient(to bottom left, #57afeb, #d3a8f0);
+}
+
+header {
+  color: #fff;
+  font-family: "Tektur", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: larger;
+  text-align: center;
+  margin-bottom: 1rem;
+  padding: 20px;
+  border-bottom: 5px solid #ff4242;
+  box-shadow: 0px 10px 10px rgba(255, 0, 0, 0.5);
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(300px, 1fr));
+  gap: 1rem;
+  padding: 2rem;
+  text-align: center;
+  justify-content: center;
+  align-content: stretch;
+  align-items: stretch;
+  justify-items: stretch;
+}
+
+.project-card {
+  font-size: 17px;
+  background-image: linear-gradient(to bottom left, #57afeb, #d3a8f0);
+  border: 1px solid #2baafe;
+  border-radius: 10px;
+  padding: 2rem;
+  margin: 1rem;
+  transition: 0.5s;
+}
+
+.project-card:hover {
+  background-image: linear-gradient(to top right, #57afeb, #d3a8f0);
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  padding: 2rem;
+}
+
+h2 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-weight: 500;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.btn-link {
+  position: relative;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-family: "Tektur", sans-serif;
+  background: transparent;
+  color: #0ff;
+  cursor: pointer;
+  border: 2px solid #0ff;
+  padding: 10px 26px;
+  margin: 0 15px;
+}
+
+.btn-link:hover {
+  background: #0ff;
+  color: #333;
+  font-weight: 600;
+  transition: 0.5s;
+}
+
+@media (max-width: 650px) {
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0.5rem;
+    padding: 0.5rem;
+  }
+  .project-card img {
+    width: 300px;
+    height: auto;
+    padding: 15px;
+  }
+  .project-card {
+    padding: 5px;
+  }
+}
+
+@media (min-width: 651px) and (max-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .project-card img {
+    width: 300px;
+    height: auto;
+    padding: 15px;
+  }
+  .project-card {
+    padding: 5px;
+  }
+}
