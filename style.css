@@ -43,16 +43,19 @@ h1 {
 
 .project-card {
   font-size: 17px;
-  background-image: linear-gradient(to bottom left, #57afeb, #d3a8f0);
+  background: transparent;
   border: 1px solid #2baafe;
   border-radius: 10px;
-  padding: 2rem;
+  padding: 1rem;
   margin: 1rem;
   transition: 0.5s;
 }
 
 .project-card:hover {
-  background-image: linear-gradient(to top right, #57afeb, #d3a8f0);
+  background: #2baafe;
+  color: #fff;
+  font-weight: 600;
+  transition: 0.5s;
 }
 
 .project-card img {
@@ -68,8 +71,10 @@ h2 {
 
 p {
   font-weight: 500;
+  color: #000;
   font-size: 1.2rem;
-  margin-bottom: 2rem;
+  margin: 20px;
+  text-wrap: wrap;
 }
 
 .btn-link {
@@ -82,7 +87,10 @@ p {
   cursor: pointer;
   border: 2px solid #0ff;
   padding: 10px 26px;
-  margin: 0 15px;
+}
+
+.btn-link:last-child {
+  margin-bottom: 30px;
 }
 
 .btn-link:hover {
