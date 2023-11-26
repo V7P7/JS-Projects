@@ -83,6 +83,11 @@ input.cell:focus {
   background-color: #1cd0e8;
 }
 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  display: none !important;
+}
+
 .button-group {
   display: flex;
   gap: 30px;
