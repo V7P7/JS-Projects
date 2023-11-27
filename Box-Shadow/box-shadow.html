@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Shadow Generator</title>
+    <link rel="stylesheet" href="b-s.css">
+</head>
+
+<body class="body">
+
+    <div class="container">
+        <div class="result">
+            <div id="preview"></div>
+        </div>
+
+        <div class="settings">
+            <div class="range-wrapper">
+                <label for="x-shadow">Horizontal Shadow :</label>
+                <input type="range" min="-100" max="100" id="x-shadow" value="0">
+            </div>
+            <div class="range-wrapper">
+                <label for="y-shadow">Vertical Shadow :</label>
+                <input type="range" min="-100" max="100" id="y-shadow" value="0">
+            </div>
+            <div class="range-wrapper">
+                <label for="b-rad">Blur Radius :</label>
+                <input type="range" min="0" max="100" id="b-rad" value="10">
+            </div>
+            <div class="range-wrapper">
+                <label for="s-rad">Spread Radius :</label>
+                <input type="range" min="-50" max="50" id="s-rad" value="10">
+            </div>
+            <div class="range-wrapper">
+                <label for="bor-r">Border Radius :</label>
+                <input type="range" min="0" max="100" id="bor-rad" step="1" value="50">
+            </div>
+            <div class="range-wrapper">
+                <label for="shadow-opacity">Shadow Opacity :</label>
+                <input type="range" min="0" max="1" id="shadow-opacity" step="0.1" value="0.75">
+            </div>
+
+            <div class="input-wrapper">
+                <label for="inset-shadow">Instet Shadow :</label>
+                <input type="checkbox" id="inset-shadow">
+            </div>
+
+            <div id="color-wrapper">
+                <label for="shadow-color">Shadow Color :</label>
+                <input type="color" id="shadow-color" value="#7c39e7">
+            </div>
+
+        </div>
+
+        <div class="code-container">
+            <textarea id="code" rows="2" readonly></textarea>
+            <button id="copyBtn" onclick="copyCode()">Copy Styles</button>
+        </div>
+
+    </div>
+
+    <script src="b-s.js"></script>
+</body>
+
+</html>

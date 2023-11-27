@@ -31,16 +31,15 @@ function generateRandomGradient() {
   colorOne.value = randomColor1;
   colorTwo.value = randomColor2;
 
-  // Generate a random direction
   const directions = [
     "to top",
     "to bottom",
     "to right",
     "to left",
     "to top right",
-    "to bottom left",
-    "to bottom right",
     "to top left",
+    "to bottom right",
+    "to bottom left",
   ];
   const randomDirection =
     directions[Math.floor(Math.random() * directions.length)];

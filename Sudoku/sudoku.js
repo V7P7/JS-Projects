@@ -25,11 +25,9 @@ function createCellInput(row, col) {
   input.className = "cell";
   input.id = `cell-${row}-${col}`;
   input.maxLength = 1;
-  input.pattern = "[1-9]"; // Only allows numbers 1-9
-
-  // Add oninput event listener to restrict input to one character
+  input.pattern = "[1-9]";
   input.addEventListener("input", function () {
-    this.value = this.value.slice(0, 1); // Keep only the first character
+    this.value = this.value.slice(0, 1);
   });
 
   return input;
@@ -116,28 +114,26 @@ function solveSudokuHelper(board) {
           if (isValidMove(board, row, col, num)) {
             board[row][col] = num;
             if (solveSudokuHelper(board)) {
-              return true; // Puzzle solved
+              return true;
             }
-            board[row][col] = 0; // Backtrack
+            board[row][col] = 0;
           }
         }
-        return false; // No valid number found
+        return false;
       }
     }
   }
-  return true; // All cells filled
+  return true;
 }
 
 function isValidMove(board, row, col, num) {
-  // Check if the number is positive
   if (num <= 0) {
-    return false; // Negative numbers are not allowed
+    return false;
   }
 
-  // Check row and column for conflicts
   for (let i = 0; i < gridSize; i++) {
     if (board[row][i] === num || board[i][col] === num) {
-      return false; // Conflict found
+      return false;
     }
   }
 
@@ -147,11 +143,11 @@ function isValidMove(board, row, col, num) {
   for (let i = startRow; i < startRow + 3; i++) {
     for (let j = startCol; j < startCol + 3; j++) {
       if (board[i][j] === num) {
-        return false; // Conflict found
+        return false;
       }
     }
   }
-  return true; // No conflicts found
+  return true;
 }
 
 function validateInput(sudokuArray) {
@@ -161,10 +157,10 @@ function validateInput(sudokuArray) {
       if (currentNum !== 0) {
         sudokuArray[row][col] = 0;
         if (!isValidMove(sudokuArray, row, col, currentNum)) {
-          sudokuArray[row][col] = currentNum; // Reset the cell value
-          return false; // Invalid input
+          sudokuArray[row][col] = currentNum;
+          return false;
         }
-        sudokuArray[row][col] = currentNum; // Reset the cell value
+        sudokuArray[row][col] = currentNum;
       }
     }
   }

@@ -14,7 +14,7 @@ body {
 body {
   background-image: linear-gradient(to bottom right, #50d5b7, #067d68);
   background-repeat: no-repeat;
-  background-attachment: fixed; /* This ensures the background stays in place even with scrolling */
+  background-attachment: fixed;
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -83,8 +83,8 @@ input.cell:focus {
   background-color: #1cd0e8;
 }
 
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
   display: none !important;
 }
 
